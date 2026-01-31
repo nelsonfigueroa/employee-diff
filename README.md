@@ -4,6 +4,8 @@ Get a diff of employees from a BambooHR directory. See who comes and goes whethe
 
 ## Running:
 
+**At this time, this only works with Firefox**
+
 Create a Python virtual environment:
 ```
 python3 -m venv venv
@@ -19,15 +21,12 @@ Install dependencies:
 pip3 install -r requirements.txt
 ```
 
-Install firefox via Playwright:
-```
-playwright install firefox
-```
-
 Run the script, passing in your company's BambooHR subdomain:
 ```
 python3 main.py -s mycompany
 ```
+
+A browser window will pop up, prompting you to log in. After logging in, press enter. Your session will be saved locally so you don't need to enter your credentials every time you want to run this script.
 
 The script will output a textfile with results in the format `employees-YYYY-MM-DD.txt`.
 
