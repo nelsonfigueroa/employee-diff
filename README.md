@@ -4,7 +4,7 @@ Get a diff of employees from a BambooHR directory. See who comes and goes whethe
 
 ## Running:
 
-**At this time, this only works with Firefox**
+**At this time, this only works with Firefox**, so you'll need Firefox installed on your machine. 
 
 Create a Python virtual environment:
 ```
@@ -30,7 +30,7 @@ A browser window will pop up, prompting you to log in. After logging in, press e
 
 The script will output a textfile with results in the format `employees-YYYY-MM-DD.txt`.
 
-Run this periodically, then compare results with `diff` or a similar tool. For example:
+Run this script periodically, then compare results with `diff` or a similar tool. For example:
 
 ```shell
 diff employees-2026-01-20.txt employees-2026-01-27.txt
