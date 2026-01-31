@@ -1,7 +1,6 @@
 # employee-diff
-Get a diff of employees from the BambooHR directory. See who comes and goes whether leadership stays silent about it or not 👀
 
-At this time, this only works with Firefox
+Get a diff of employees from a BambooHR directory. See who comes and goes whether leadership stays silent about it or not 👀
 
 ## Running:
 
@@ -10,7 +9,7 @@ Create a Python virtual environment:
 python3 -m venv venv
 ```
 
-Active the environment:
+Activate the virtual environment:
 ```
 source venv/bin/activate
 ```
@@ -20,7 +19,20 @@ Install dependencies:
 pip3 install -r requirements.txt
 ```
 
-Run the script:
+Install firefox via Playwright:
 ```
-python3 main.py
+playwright install firefox
+```
+
+Run the script, passing in your company's BambooHR subdomain:
+```
+python3 main.py -s mycompany
+```
+
+The script will output a textfile with results in the format `employees-YYYY-MM-DD.txt`.
+
+Run this periodically, then compare results with `diff` or a similar tool. For example:
+
+```shell
+diff employees-2026-01-20.txt employees-2026-01-27.txt
 ```
