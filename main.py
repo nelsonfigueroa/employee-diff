@@ -61,7 +61,7 @@ employees_list.sort()
 
 # write each employee to a textfile with the format employees-YYYY-MM-DD.txt
 today = datetime.today().strftime('%Y-%m-%d')
-output_file = f'employees-{today}.txt'
+output_file = f'snapshots/employees-{today}.txt'
 with open(output_file, "w") as f:
     for employee in employees_list:
         f.write(employee)
