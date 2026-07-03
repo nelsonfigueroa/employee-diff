@@ -35,12 +35,12 @@ if len(textfiles) > 1:
     curr_snapshot = None
     prev_snapshot = None
 
-    for date in db:
+    for snapshot_date in db:
         prev_date = curr_date
-        curr_date = date
+        curr_date = snapshot_date
 
         prev_snapshot = curr_snapshot
-        curr_snapshot = db[date]
+        curr_snapshot = db[snapshot_date]
 
         if prev_snapshot is None:
             continue
