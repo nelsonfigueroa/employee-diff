@@ -30,8 +30,23 @@ A browser window will pop up, prompting you to log in. After logging in, press e
 
 The script will output a textfile with results in the format `employees-YYYY-MM-DD.txt`.
 
-Run this script periodically, then compare results with `diff` or a similar tool. For example:
+If older snapshots (textfiles) exist, it will do a diff. For example:
 
-```shell
-diff employees-2026-01-20.txt employees-2026-01-27.txt
+```diff
+2025-12-31 -> 2026-04-03
+- John
++ David
+2026-04-03 -> 2026-06-23
++ James
+2026-06-23 -> 2026-07-02
+- James
++ Suzy
+2026-07-02 -> 2026-07-03
+- Alice
+- David
+- Suzy
++ Brian
++ Stephanie
++ Oscar
++ Jen
 ```
