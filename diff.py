@@ -51,6 +51,11 @@ def diff_employees():
             added   = set(curr_snapshot) - set(prev_snapshot)
 
             print(f'{prev_date} -> {curr_date}')
+            # if `removed` and `added` are both empty sets, that means no employees joined or left
+            if not removed and not added:
+                print("no changes")
+                continue
+
             for employee in removed:
                 print(f'{RED}- {employee}{RESET}')
 
